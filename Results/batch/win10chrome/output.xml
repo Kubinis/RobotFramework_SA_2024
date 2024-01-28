@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-22T14:38:21.756018" rpa="false" schemaversion="5">
+<suite id="s1" name="Scenariovolfes1" source="C:\Users\admin\PycharmProjects\pythonProject2\tests\Scenariovolfes1.robot">
+<test id="s1-t1" name="Step 1: Login to the website" line="8">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-22T14:38:21.962452" level="INFO">Starting...</msg>
+<arg>Starting...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-22T14:38:21.962452" elapsed="0.000000"/>
+</kw>
+<kw name="Open website" owner="KeywordsVolFes">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:21.963444" level="INFO">Opening browser 'Chrome' to base url 'https://signals:12wDj5SonltD@signals.forge.smile.fr/'.</msg>
+<arg>${MainUrl}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-22T14:38:21.963444" elapsed="3.475263"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-22T14:38:25.438707" elapsed="0.128276"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>.2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-01-22T14:38:25.567983" elapsed="0.000996"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-01-22T14:38:25.570058" elapsed="0.206497"/>
+</kw>
+<status status="PASS" start="2024-01-22T14:38:21.962452" elapsed="3.814103"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:26.210006" level="INFO">Current page contains text 'Nous vous conseillons'.</msg>
+<arg>Nous vous conseillons</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-01-22T14:38:25.778563" elapsed="0.431443"/>
+</kw>
+<kw name="Login On the website" owner="KeywordsVolFes">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:26.215003" level="INFO">Clicking link '//div[@class="panel header"]//a[text()="Connexion"]'.</msg>
+<arg>${ConnexionBtn}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:26.213395" elapsed="1.611588"/>
+</kw>
+<kw name="Check Url is" owner="KeywordsVolFes">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:28.037173" level="INFO">${currenturl} = https://signals.forge.smile.fr/customer/account/login/</msg>
+<var>${currenturl}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-01-22T14:38:27.826068" elapsed="0.211506"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${currenturl}</arg>
+<arg>${url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-01-22T14:38:28.037574" elapsed="0.000000"/>
+</kw>
+<arg>${LoginUrl}</arg>
+<status status="PASS" start="2024-01-22T14:38:27.824983" elapsed="0.213553"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${CookieBtn}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-22T14:38:28.038698" elapsed="0.217073"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:28.257584" level="INFO">Clicking element '//div[@id="cookiePolicyBar"]//div[@id="ow_consent_prompt_submit"]'.</msg>
+<arg>${CookieBtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:28.256461" elapsed="0.527820"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:28.784281" level="INFO">Typing text 'maleb+test@smile.fr' into text field '//input[@id="email"]'.</msg>
+<arg>${emailField}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:28.784281" elapsed="0.752672"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:29.537941" level="INFO">Typing text 'Smile123$' into text field '//input[@id="pass"]'.</msg>
+<arg>${pwdField}</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:29.537507" elapsed="0.778607"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:30.318119" level="INFO">Clicking button '//fieldset//button[@id="send2"]'.</msg>
+<arg>${LoginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:30.316114" elapsed="2.208281"/>
+</kw>
+<status status="PASS" start="2024-01-22T14:38:26.212020" elapsed="6.312375"/>
+</kw>
+<kw name="Check Url is" owner="KeywordsVolFes">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:32.744574" level="INFO">${currenturl} = https://signals.forge.smile.fr/customer/account/</msg>
+<var>${currenturl}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-01-22T14:38:32.528568" elapsed="0.216006"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${currenturl}</arg>
+<arg>${url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-01-22T14:38:32.744574" elapsed="0.001126"/>
+</kw>
+<arg>${MyAccountUrl}</arg>
+<status status="PASS" start="2024-01-22T14:38:32.526344" elapsed="0.219356"/>
+</kw>
+<kw name="Go to HP" owner="KeywordsVolFes">
+<kw name="Click Image" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:32.747653" level="INFO">Clicking image '//div[2]/header/div[3]/a/img'.</msg>
+<arg>${HPIcon}</arg>
+<doc>Clicks an image identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:32.746536" elapsed="1.351684"/>
+</kw>
+<status status="PASS" start="2024-01-22T14:38:32.746536" elapsed="1.351684"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-01-22T14:38:21.961430" elapsed="12.137632"/>
+</test>
+<test id="s1-t2" name="Step 2: Add product to cart" line="17">
+<kw name="Add products to the cart" owner="KeywordsVolFes">
+<kw name="Click Image" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:34.102061" level="INFO">Clicking image '//div[@class="block-content content"]//img[@alt="Kit Enrouleur + support + récepteur Signals EasyExtend®"]'.</msg>
+<arg>${PDPFromHP}</arg>
+<doc>Clicks an image identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:34.101062" elapsed="1.382070"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:35.484714" level="INFO">Clicking button '//button[@id="product-addtocart-button"]'.</msg>
+<arg>${AddToCartButtonOnPdp}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:35.483718" elapsed="1.196894"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:36.682539" level="INFO">Clicking element '//div[@class="minicart-wrapper"]//a[@class="action showcart"]'.</msg>
+<arg>${MyCartButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:36.681425" elapsed="0.518660"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:37.201129" level="INFO">Clicking element '//div[@class="actions"]//a[@class="action primary checkout"]'.</msg>
+<arg>${GoToCartPopinButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:37.200085" elapsed="1.537870"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SetProductQuantity}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-22T14:38:38.737955" elapsed="0.232160"/>
+</kw>
+<status status="PASS" start="2024-01-22T14:38:34.101062" elapsed="4.869053"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:39.397335" level="INFO">Current page contains text 'Kit Enrouleur + support + récepteur Signals EasyExtend®'.</msg>
+<arg>Kit Enrouleur + support + récepteur Signals EasyExtend®</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-01-22T14:38:38.971119" elapsed="0.426216"/>
+</kw>
+<tag>Product</tag>
+<status status="PASS" start="2024-01-22T14:38:34.100065" elapsed="5.299130"/>
+</test>
+<test id="s1-t3" name="Step 3: Checkout" line="22">
+<kw name="Page 1 Livration" owner="KeywordsVolFes">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:39.407257" level="INFO">Typing text '1' into text field '//div[@class='control qty']//input[@title='Qté']'.</msg>
+<arg>${SetProductQuantity}</arg>
+<arg>${ProductQuantity}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:39.406063" elapsed="0.824311"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:40.233382" level="INFO">Clicking button '//div[@class='cart main actions']//button[@name='update_cart_action']'.</msg>
+<arg>${UpdateCart}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:40.231386" elapsed="2.900482"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:43.131868" level="INFO">Clicking element '//*[@id="maincontent"]/div[3]/div/div[5]/div/ul/li[1]/button'.</msg>
+<arg>${COnfirmCart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:43.131868" elapsed="1.693713"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-22T14:38:46.826062" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-22T14:38:44.825581" elapsed="2.000481"/>
+</kw>
+<kw name="Check Url is" owner="KeywordsVolFes">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:47.032671" level="INFO">${currenturl} = https://signals.forge.smile.fr/checkout/#shipping</msg>
+<var>${currenturl}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-01-22T14:38:46.826062" elapsed="0.206609"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${currenturl}</arg>
+<arg>${url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-01-22T14:38:47.032671" elapsed="0.000000"/>
+</kw>
+<arg>${CheckoutLivrationPage1}</arg>
+<status status="PASS" start="2024-01-22T14:38:46.826062" elapsed="0.206609"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SubmitButtonPage1}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-22T14:38:47.033668" elapsed="0.213453"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:47.247121" level="INFO">Clicking button '//div[@id="shipping-method-buttons-container"]//button[@type="submit"]'.</msg>
+<arg>${SubmitButtonPage1}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:47.247121" elapsed="1.077551"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-22T14:38:50.325121" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-22T14:38:48.324672" elapsed="2.000449"/>
+</kw>
+<kw name="Check Url is" owner="KeywordsVolFes">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:50.542306" level="INFO">${currenturl} = https://signals.forge.smile.fr/checkout/#payment</msg>
+<var>${currenturl}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-01-22T14:38:50.327762" elapsed="0.214544"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${currenturl}</arg>
+<arg>${url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-01-22T14:38:50.543153" elapsed="0.000990"/>
+</kw>
+<arg>${CheckoutPaymentPage2}</arg>
+<status status="PASS" start="2024-01-22T14:38:50.325723" elapsed="0.219417"/>
+</kw>
+<status status="PASS" start="2024-01-22T14:38:39.405034" elapsed="11.140328"/>
+</kw>
+<kw name="Page 2 Payment" owner="KeywordsVolFes">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${SubmitButtonPage2}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-01-22T14:38:50.548133" elapsed="0.730944"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:51.281093" level="INFO">Clicking button '//div[@class="actions-toolbar"]//button[@data-bind="click: savePayment"]'.</msg>
+<arg>${SubmitButtonPage2}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:51.280092" elapsed="1.196060"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-22T14:38:54.478468" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-22T14:38:52.477215" elapsed="2.001253"/>
+</kw>
+<kw name="Check Url is" owner="KeywordsVolFes">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:54.698736" level="INFO">${currenturl} = https://signals.forge.smile.fr/checkout/#confirmation</msg>
+<var>${currenturl}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-01-22T14:38:54.481516" elapsed="0.217220"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${currenturl}</arg>
+<arg>${url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-01-22T14:38:54.698736" elapsed="0.001059"/>
+</kw>
+<arg>${CheckoutConfirmationPage3}</arg>
+<status status="PASS" start="2024-01-22T14:38:54.479526" elapsed="0.220269"/>
+</kw>
+<status status="PASS" start="2024-01-22T14:38:50.547135" elapsed="4.152660"/>
+</kw>
+<kw name="Page 3 Confirmation" owner="KeywordsVolFes">
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:54.702781" level="INFO">Selecting checkbox '//div[@class='checkout-agreement field choice required']//input[@type="checkbox"]'.</msg>
+<arg>${Checkbox}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:54.701901" elapsed="1.212088"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:55.913989" level="INFO">Clicking button '//div[@class='primary']//button[@data-bind="click: placeOrder"]'.</msg>
+<arg>${SubmitButtonPage3}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T14:38:55.913989" elapsed="1.152834"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-22T14:38:59.069019" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-22T14:38:57.067526" elapsed="2.001493"/>
+</kw>
+<kw name="Check Url is" owner="KeywordsVolFes">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-01-22T14:38:59.285726" level="INFO">${currenturl} = https://signals.forge.smile.fr/checkout/onepage/success/</msg>
+<var>${currenturl}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-01-22T14:38:59.073820" elapsed="0.211906"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${currenturl}</arg>
+<arg>${url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-01-22T14:38:59.286363" elapsed="0.000000"/>
+</kw>
+<arg>${CheckoutSuccessPage4}</arg>
+<status status="PASS" start="2024-01-22T14:38:59.070031" elapsed="0.216332"/>
+</kw>
+<status status="PASS" start="2024-01-22T14:38:54.701782" elapsed="4.585554"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-22T14:39:04.288990" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-22T14:38:59.288339" elapsed="5.001473"/>
+</kw>
+<tag>Checkout</tag>
+<status status="PASS" start="2024-01-22T14:38:39.403078" elapsed="24.887789"/>
+</test>
+<doc>Keyword to take a screen and add it to comparison folder</doc>
+<status status="PASS" start="2024-01-22T14:38:21.757981" elapsed="42.536849"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Checkout</stat>
+<stat pass="1" fail="0" skip="0">Login</stat>
+<stat pass="1" fail="0" skip="0">Product</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Scenariovolfes1">Scenariovolfes1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
