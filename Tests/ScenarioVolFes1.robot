@@ -32,7 +32,7 @@ Step 1: Login to the website
 Step 2: Add product to cart
     [Tags]  Product  Smoke
     Add Products To The Cart From HP1
-    Add Products To The Cart From HP3
+    Add Products To The Cart From HP2
     Open Cart Throught "My Cart" Popin In Header
     Verify Product In The Cart
     Set Quantity Of Product
