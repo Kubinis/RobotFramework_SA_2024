@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   End2End test cases New2
+Documentation   End2End test cases New23
 Library         SeleniumLibrary
 Resource        ../Resources/ScenarioVolFesApp.robot
 Resource        ../Resources/Common.robot
